@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Obfuscator | Ironbrew 2 Style</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div style="text-align: center;">
+            <div style="width: 80px; height: 80px; border: 5px solid transparent; border-top: 5px solid #00ffff; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+            <div style="margin-top: 20px; font-size: 1.2rem; color: #00ffff;" id="loadingText">Initializing...</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">MEOW OBFUSCATOR</h1>
+            <p class="tagline">MEOW CUTE UPDATE OBFUSCATED NEW BY LINH</p>
+        </header>
+
+        <div class="code-panel">
+            <div class="panel-header">
+                <div class="panel-title">INPUT CODE</div>
+                <div>
+                    <button class="btn" id="clearBtn">Clear</button>
+                    <button class="btn" id="exampleBtn">Example</button>
+                </div>
+            </div>
+            <textarea id="inputCode" class="code-editor" placeholder="Paste your Lua/Luau code here..."></textarea>
+        </div>
+
+        <div class="settings-panel">
+            <h2 style="color: var(--neon-pink); margin-bottom: 20px;">OBFUSCATION SETTINGS</h2>
+            <div class="settings-grid">
+                <div class="setting-group">
+                    <label>VM Protection</label>
+                    <select id="vmLevel">
+                        <option value="max">Maximum</option>
+                        <option value="high" selected>High</option>
+                        <option value="medium">Medium</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <label>String Encryption</label>
+                    <select id="stringEncryption">
+                        <option value="custom" selected>Custom Ironbrew 2</option>
+                        <option value="triple">Triple Layer</option>
+                        <option value="extreme">Extreme</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <label>Control Flow</label>
+                    <select id="controlFlow">
+                        <option value="heavy" selected>Heavy Flattening</option>
+                        <option value="extreme">Extreme</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <label>Anti-Tamper</label>
+                    <select id="antiTamper">
+                        <option value="full" selected>Full Protection</option>
+                        <option value="basic">Basic</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" id="obfuscateBtn" style="padding: 15px 40px; font-size: 1.1rem;">OBFUSCATE CODE</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value" id="originalSize">0</div>
+                <div>Original Size</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="obfuscatedSize">0</div>
+                <div>Obfuscated Size</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="protectionLevel">0%</div>
+                <div>Protection Level</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="processingTime">0s</div>
+                <div>Processing Time</div>
+            </div>
+        </div>
+
+        <div class="code-panel">
+            <div class="panel-header">
+                <div class="panel-title">OBFUSCATED OUTPUT</div>
+                <div>
+                    <button class="btn" id="copyBtn">Copy</button>
+                    <button class="btn" id="downloadBtn">Download</button>
+                </div>
+            </div>
+            <textarea id="outputCode" class="code-editor" placeholder="Obfuscated code will appear here..." readonly></textarea>
+        </div>
+
+        <div style="text-align: center; padding: 30px; color: #8080ff;">
+            <p><strong>Neon Obfuscator v2.0</strong> • Ironbrew 2 Style VM Protection</p>
+            <p style="margin-top: 10px;">
+                Obfuscated By Meow Hub • 
+                <a href="https://discord.gg/sWtCuDf6zw" style="color: var(--neon-cyan);">Discord</a> • 
+                <a href="https://www.youtube.com/@Anura-gaming-real" style="color: var(--neon-cyan);">YouTube</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="obfuscator.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>
