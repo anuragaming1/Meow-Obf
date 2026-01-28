@@ -1,0 +1,14 @@
+{
+  "name": "Meow-obf",
+  "version": "2.0.0",
+  "description": "Ironbrew 2 Style Lua/Luau Obfuscator",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.0.0"
+  },
+  "author": "Meow Hub",
+  "license": "MIT"
+}
